@@ -10,6 +10,11 @@ let jogadores = {};
 let placar = [];
 let chat = [];
 
+// === 0. ROTA PRINCIPAL (Evita o erro "Cannot GET /") ===
+app.get('/', (req, res) => {
+  res.send('Servidor do Pocket Code está funcionando perfeitamente! 🚀');
+});
+
 // === 1. POSIÇÃO DE JOGADORES (Multiplayer) ===
 // Salvar / Atualizar posição
 app.get('/mover', (req, res) => {
